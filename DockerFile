@@ -1,0 +1,38 @@
+
+# For sample module
+FROM node:16.13.0-alpine as alpine
+
+# For lib module
+FROM alpine as lib
+
+WORKDIR /usr/src/app/lib-db-schemas/
+
+COPY ./lib-db-schemas/package.json ./
+
+RUN npm install
+
+COPY ./lib-db-schemas ./
+
+# For sample module
+FROM alpine as sample
+
+WORKDIR /usr/src/app/sample-service/
+
+COPY ./sample-service/package.json ./
+
+RUN npm install
+
+COPY ./sample-service ./
+
+# For main service
+FROM sample as main
+
+WORKDIR /usr/src/app/main-service/
+
+COPY ./main-service/package.json ./
+
+RUN npm install
+
+COPY ./main-service ./
+
+CMD ["node", "app.js"]

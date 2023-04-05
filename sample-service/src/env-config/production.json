@@ -1,0 +1,6 @@
+{
+  "kc-learning": {
+    "host": "http://kc-learning",
+    "port": "3000"
+  }
+}

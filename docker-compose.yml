@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  gateway:
+    image: 624998038573.dkr.ecr.ap-south-1.amazonaws.com/my-node-project
+    container_name: main-service
+    ports:
+      - '80:3000'
+    env_file:
+      - .env
+    volumes:
+      - ${EB_LOG_BASE_DIR}/gateway:/usr/src/app/main  

@@ -1,0 +1,2 @@
+const { SequelizeRC } = require('../sample-service/src/sequelizeRc');
+module.exports = new SequelizeRC().createRC();

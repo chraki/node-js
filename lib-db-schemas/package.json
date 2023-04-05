@@ -1,0 +1,23 @@
+{
+  "name": "lib-db-schemas",
+  "version": "1.0.0",
+  "description": "To handle models of my application",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .js ./",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chraki/node-js.git"
+  },
+  "author": "Rakesh Chintada",
+  "homepage": "https://github.com/chraki/node-js#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "sequelize": "6.6.5"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0"
+  }
+}
